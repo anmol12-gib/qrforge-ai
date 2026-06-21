@@ -52,17 +52,7 @@ export function Footer() {
                 </a>
               </p>
             </div>
-            <div className="mt-6">
-              <Button
-                variant="primary"
-                size="md"
-                icon={<ExternalLink className="w-4 h-4" />}
-                onClick={() => window.open('https://digitalheroesco.com', '_blank', 'noopener,noreferrer')}
-                aria-label="Built for Digital Heroes — opens digitalheroesco.com"
-              >
-                Built for Digital Heroes
-              </Button>
-            </div>
+            
           </div>
         </div>
 
