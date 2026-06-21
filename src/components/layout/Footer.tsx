@@ -1,8 +1,6 @@
-import { ExternalLink, QrCode } from 'lucide-react';
-import { Button } from '../ui/Button';
+import { QrCode } from 'lucide-react';
 
 const EMAIL = 'anmol.virmani@gmail.com';
-
 export function Footer() {
   return (
     <footer className="border-t border-app bg-app-footer" role="contentinfo">
@@ -52,9 +50,7 @@ export function Footer() {
                 </a>
               </p>
             </div>
-            
-          </div>
-        </div>
+          </div>        </div>
 
         <div className="pt-8 border-t border-app flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-app-subtle">
           <p>&copy; {new Date().getFullYear()} QRForge AI. All rights reserved.</p>
