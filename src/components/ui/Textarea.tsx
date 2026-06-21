@@ -12,7 +12,7 @@ export function Textarea({ label, hint, className = '', id, rows = 3, ...props }
   return (
     <div className="space-y-1.5">
       {label && (
-        <label htmlFor={inputId} className="block text-sm font-medium text-gray-300">
+        <label htmlFor={inputId} className="block text-sm font-medium text-app-label">
           {label}
         </label>
       )}
@@ -20,9 +20,9 @@ export function Textarea({ label, hint, className = '', id, rows = 3, ...props }
         id={inputId}
         rows={rows}
         className={`
-          w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white
-          placeholder:text-gray-500 transition-all duration-200 resize-y min-h-[80px]
-          hover:border-white/20 focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20
+          w-full bg-app-input border border-app rounded-xl px-4 py-3 text-app
+          placeholder:text-app-subtle transition-all duration-200 resize-y min-h-[80px]
+          hover:border-app-hover focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20
           focus:outline-none
           ${className}
         `}
@@ -30,7 +30,7 @@ export function Textarea({ label, hint, className = '', id, rows = 3, ...props }
         {...props}
       />
       {hint && (
-        <p id={`${inputId}-hint`} className="text-xs text-gray-500">
+        <p id={`${inputId}-hint`} className="text-xs text-app-subtle">
           {hint}
         </p>
       )}

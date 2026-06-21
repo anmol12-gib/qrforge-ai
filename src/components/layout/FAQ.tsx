@@ -39,14 +39,14 @@ export function FAQ() {
           <h2 id="faq-heading" className="text-3xl sm:text-4xl font-bold mb-4">
             Frequently asked questions
           </h2>
-          <p className="text-gray-400">Everything you need to know about QRForge AI.</p>
+          <p className="text-app-muted">Everything you need to know about QRForge AI.</p>
         </div>
 
         <div className="space-y-3">
           {FAQS.map((faq, i) => (
             <div
               key={faq.q}
-              className="border border-white/10 rounded-2xl overflow-hidden bg-white/[0.02]"
+              className="border border-app rounded-2xl overflow-hidden bg-app-surface-elevated"
             >
               <button
                 type="button"
@@ -54,13 +54,13 @@ export function FAQ() {
                 aria-expanded={open === i}
                 aria-controls={`faq-panel-${i}`}
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between gap-4 p-5 text-left
-                  hover:bg-white/[0.03] transition-colors focus-visible:outline-none
+                className="w-full flex items-center justify-between gap-4 p-5 text-left text-app
+                  hover-app transition-colors focus-visible:outline-none
                   focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500/40"
               >
                 <span className="font-medium">{faq.q}</span>
                 <ChevronDown
-                  className={`w-5 h-5 text-gray-500 shrink-0 transition-transform ${open === i ? 'rotate-180' : ''}`}
+                  className={`w-5 h-5 text-app-subtle shrink-0 transition-transform ${open === i ? 'rotate-180' : ''}`}
                   aria-hidden
                 />
               </button>
@@ -76,7 +76,7 @@ export function FAQ() {
                     transition={{ duration: 0.2 }}
                     className="overflow-hidden"
                   >
-                    <p className="px-5 pb-5 text-gray-400 text-sm leading-relaxed">{faq.a}</p>
+                    <p className="px-5 pb-5 text-app-muted text-sm leading-relaxed">{faq.a}</p>
                   </motion.div>
                 )}
               </AnimatePresence>

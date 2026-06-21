@@ -42,13 +42,13 @@ const USE_CASES = [
 
 export function UseCases() {
   return (
-    <section id="use-cases" className="py-24 px-4 sm:px-6 bg-white/[0.02]" aria-labelledby="use-cases-heading">
+    <section id="use-cases" className="py-24 px-4 sm:px-6 bg-app-surface" aria-labelledby="use-cases-heading">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 id="use-cases-heading" className="text-3xl sm:text-4xl font-bold mb-4">
             Built for every use case
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-app-muted max-w-2xl mx-auto">
             From marketing campaigns to everyday convenience — QRForge AI handles it all.
           </p>
         </div>
@@ -61,12 +61,12 @@ export function UseCases() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className={`relative overflow-hidden p-8 rounded-2xl border border-white/10
-                bg-gradient-to-br ${item.gradient} hover:border-white/20 transition-all`}
+              className={`relative overflow-hidden p-8 rounded-2xl border border-app
+                bg-gradient-to-br ${item.gradient} hover:border-app-hover transition-all`}
             >
-              <item.icon className="w-10 h-10 text-white/80 mb-4" aria-hidden />
-              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
+              <item.icon className="w-10 h-10 text-app mb-4" aria-hidden />
+              <h3 className="text-xl font-semibold mb-2 text-app">{item.title}</h3>
+              <p className="text-app-muted text-sm leading-relaxed">{item.description}</p>
             </motion.div>
           ))}
         </div>

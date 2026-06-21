@@ -70,7 +70,7 @@ export function FeatureShowcase() {
               stunning QR codes
             </span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-app-muted max-w-2xl mx-auto">
             A complete toolkit designed for marketers, developers, and businesses who demand quality.
           </p>
         </div>
@@ -83,8 +83,8 @@ export function FeatureShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ delay: i * 0.05 }}
-              className="group p-6 bg-white/[0.03] border border-white/10 rounded-2xl
-                hover:border-white/20 hover:bg-white/[0.05] hover:shadow-xl hover:shadow-blue-500/5
+              className="group p-6 bg-app-surface-elevated border border-app rounded-2xl
+                hover:border-app-hover hover-app hover:shadow-xl hover:shadow-blue-500/5
                 transition-all duration-300"
             >
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 to-violet-500/20
@@ -93,7 +93,7 @@ export function FeatureShowcase() {
                 <feature.icon className="w-6 h-6 text-blue-400" aria-hidden />
               </div>
               <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">{feature.description}</p>
+              <p className="text-sm text-app-muted leading-relaxed">{feature.description}</p>
             </motion.article>
           ))}
         </div>

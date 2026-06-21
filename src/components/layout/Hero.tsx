@@ -18,7 +18,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full
-            bg-white/5 border border-white/10 text-sm text-gray-400"
+            bg-app-surface border border-app text-sm text-app-muted"
         >
           <Sparkles className="w-4 h-4 text-violet-400" aria-hidden />
           Premium QR Toolkit — 100% Client-Side
@@ -40,7 +40,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="text-lg sm:text-xl text-app-muted max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           Create, customize, and download professional QR codes for websites, WiFi, contact cards,
           events, and more.
@@ -70,7 +70,7 @@ export function Hero() {
             type="button"
             onClick={() => scrollTo('generator')}
             aria-label="Scroll to generator"
-            className="text-gray-500 hover:text-gray-300 transition-colors animate-bounce"
+            className="text-app-subtle hover:text-app-muted transition-colors animate-bounce"
           >
             <ArrowDown className="w-6 h-6 mx-auto" />
           </button>

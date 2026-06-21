@@ -15,10 +15,10 @@ const variants: Record<Variant, string> = {
   primary:
     'bg-gradient-to-r from-blue-600 via-violet-600 to-cyan-500 text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:brightness-110 active:scale-[0.97]',
   secondary:
-    'bg-white/10 text-white border border-white/10 hover:bg-white/15 hover:border-white/20 active:scale-[0.97]',
-  ghost: 'text-gray-300 hover:text-white hover:bg-white/5 active:scale-[0.97]',
+    'bg-app-surface text-app border border-app hover-app border-app-hover active:scale-[0.97]',
+  ghost: 'text-app-muted hover:text-app hover-app active:scale-[0.97]',
   outline:
-    'border border-white/15 text-white hover:bg-white/5 hover:border-white/25 active:scale-[0.97]',
+    'border border-app text-app hover-app border-app-hover active:scale-[0.97]',
 };
 
 const sizes: Record<Size, string> = {
@@ -68,7 +68,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={`
           relative overflow-hidden inline-flex items-center justify-center gap-2 font-semibold
           transition-all duration-200 focus-visible:outline-none focus-visible:ring-2
-          focus-visible:ring-blue-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a]
+          focus-visible:ring-blue-500/60 focus-visible:ring-offset-2 ring-offset-app
           disabled:opacity-50 disabled:cursor-not-allowed
           ${variants[variant]} ${sizes[size]} ${className}
         `}
@@ -84,7 +84,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           />
         ))}
         {loading ? (
-          <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+          <span className="w-4 h-4 border-2 border-current/30 border-t-current rounded-full animate-spin" />
         ) : icon ? (
           <span className="shrink-0">{icon}</span>
         ) : null}

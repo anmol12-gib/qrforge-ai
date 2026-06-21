@@ -78,7 +78,7 @@ export function QRPreview() {
         />
       </div>
       {!encodedValue && (
-        <p className="mt-4 text-sm text-gray-500 text-center">Enter content to generate your QR code</p>
+        <p className="mt-4 text-sm text-app-subtle text-center">Enter content to generate your QR code</p>
       )}
     </motion.div>
   );

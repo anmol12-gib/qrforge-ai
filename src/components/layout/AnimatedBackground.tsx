@@ -19,7 +19,7 @@ export function AnimatedBackground() {
         transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
       />
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.03] light:opacity-[0.06]"
         style={{
           backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,

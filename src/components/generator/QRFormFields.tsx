@@ -111,14 +111,14 @@ export function QRFormFields() {
             onChange={(e) => update('password', e.target.value)}
           />
           <div className="space-y-1.5">
-            <label htmlFor="wifi-security" className="block text-sm font-medium text-gray-300">
+            <label htmlFor="wifi-security" className="block text-sm font-medium text-app-label">
               Security Type
             </label>
             <select
               id="wifi-security"
               value={(data as FormDataMap['wifi']).security}
               onChange={(e) => update('security', e.target.value)}
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white
+              className="w-full bg-app-input border border-app rounded-xl px-4 py-3 text-app
                 focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 focus:outline-none"
             >
               <option value="WPA">WPA/WPA2</option>
@@ -133,7 +133,7 @@ export function QRFormFields() {
               onChange={(e) => update('hidden', e.target.checked)}
               className="w-4 h-4 rounded accent-blue-500"
             />
-            <span className="text-sm text-gray-300">Hidden network</span>
+            <span className="text-sm text-app-label">Hidden network</span>
           </label>
         </>
       )}

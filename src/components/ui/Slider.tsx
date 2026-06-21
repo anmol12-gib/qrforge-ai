@@ -24,10 +24,10 @@ export function Slider({
   return (
     <div className="space-y-2">
       <div className="flex items-center justify-between">
-        <label htmlFor={id} className="text-sm font-medium text-gray-300">
+        <label htmlFor={id} className="text-sm font-medium text-app-label">
           {label}
         </label>
-        <span className="text-sm text-gray-400 tabular-nums">
+        <span className="text-sm text-app-muted tabular-nums">
           {value}
           {unit}
         </span>
@@ -42,7 +42,7 @@ export function Slider({
         onChange={(e) => onChange(Number(e.target.value))}
         aria-label={ariaLabel || label}
         className="w-full h-2 rounded-full appearance-none cursor-pointer
-          bg-white/10 accent-blue-500
+          bg-app-surface accent-blue-500
           [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4
           [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gradient-to-br
           [&::-webkit-slider-thumb]:from-blue-400 [&::-webkit-slider-thumb]:to-violet-500

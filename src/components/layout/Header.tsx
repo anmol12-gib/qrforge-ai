@@ -1,6 +1,5 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Menu, Moon, Sun, X } from 'lucide-react';
-import { useState } from 'react';
 import { useQRStore } from '../../store/useQRStore';
 import { Button } from '../ui/Button';
 
@@ -12,7 +11,8 @@ const NAV_LINKS = [
 ];
 
 export function Header() {
-  const { theme, toggleTheme } = useQRStore();
+  const theme = useQRStore((s) => s.theme);
+  const toggleTheme = useQRStore((s) => s.toggleTheme);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -26,11 +26,11 @@ export function Header() {
     <header
       className={`
         fixed top-0 left-0 right-0 z-50 transition-all duration-300
-        ${scrolled ? 'bg-[#0a0a0a]/90 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20' : 'bg-transparent'}
+        ${scrolled ? 'bg-app-header backdrop-blur-xl border-b border-app shadow-lg light:shadow-gray-200/50' : 'bg-transparent'}
       `}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2.5 group" aria-label="QRForge AI home">
+        <a href="#" className="flex items-center gap-2.5 group text-app" aria-label="QRForge AI home">
           <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 via-violet-500 to-cyan-400
             shadow-lg shadow-blue-500/25 group-hover:shadow-blue-500/40 transition-shadow" />
           <span className="text-lg font-bold tracking-tight">QRForge AI</span>
@@ -41,7 +41,7 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="px-4 py-2 text-sm text-gray-400 hover:text-white rounded-lg hover:bg-white/5 transition-colors"
+              className="px-4 py-2 text-sm text-app-muted hover:text-app rounded-lg hover-app transition-colors"
             >
               {link.label}
             </a>
@@ -53,8 +53,8 @@ export function Header() {
             type="button"
             onClick={toggleTheme}
             aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-            className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-colors
-              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40"
+            className="p-2 rounded-lg text-app-muted hover:text-app hover-app transition-colors
+              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 ring-offset-app"
           >
             {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </button>
@@ -70,7 +70,7 @@ export function Header() {
 
           <button
             type="button"
-            className="md:hidden p-2 rounded-lg text-gray-400 hover:text-white"
+            className="md:hidden p-2 rounded-lg text-app-muted hover:text-app"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileOpen}
@@ -82,7 +82,7 @@ export function Header() {
 
       {mobileOpen && (
         <nav
-          className="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl px-4 py-4 space-y-1"
+          className="md:hidden border-t border-app bg-app-header backdrop-blur-xl px-4 py-4 space-y-1"
           aria-label="Mobile navigation"
         >
           {NAV_LINKS.map((link) => (
@@ -90,7 +90,7 @@ export function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="block px-4 py-3 text-gray-300 hover:text-white rounded-xl hover:bg-white/5"
+              className="block px-4 py-3 text-app-muted hover:text-app rounded-xl hover-app"
             >
               {link.label}
             </a>

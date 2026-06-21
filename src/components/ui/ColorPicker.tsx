@@ -14,7 +14,7 @@ export function ColorPicker({ label, color, onChange }: ColorPickerProps) {
 
   return (
     <div className="space-y-2">
-      <span className="text-sm font-medium text-gray-300">{label}</span>
+      <span className="text-sm font-medium text-app-label">{label}</span>
       <div className="relative">
         <button
           id={id}
@@ -22,15 +22,15 @@ export function ColorPicker({ label, color, onChange }: ColorPickerProps) {
           aria-label={`${label}: ${color}`}
           aria-expanded={open}
           onClick={() => setOpen(!open)}
-          className="flex items-center gap-3 w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2.5
-            hover:border-white/20 transition-colors focus-visible:outline-none focus-visible:ring-2
-            focus-visible:ring-blue-500/40"
+          className="flex items-center gap-3 w-full bg-app-input border border-app rounded-xl px-3 py-2.5
+            hover:border-app-hover transition-colors focus-visible:outline-none focus-visible:ring-2
+            focus-visible:ring-blue-500/40 ring-offset-app"
         >
           <span
-            className="w-8 h-8 rounded-lg border border-white/20 shadow-inner shrink-0"
+            className="w-8 h-8 rounded-lg border border-app shadow-inner shrink-0"
             style={{ backgroundColor: color }}
           />
-          <span className="text-sm text-gray-400 font-mono uppercase">{color}</span>
+          <span className="text-sm text-app-muted font-mono uppercase">{color}</span>
         </button>
         <AnimatePresence>
           {open && (
@@ -40,7 +40,7 @@ export function ColorPicker({ label, color, onChange }: ColorPickerProps) {
                 initial={{ opacity: 0, y: 8, scale: 0.96 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 8, scale: 0.96 }}
-                className="absolute z-50 mt-2 p-3 bg-[#1a1a1a] border border-white/10 rounded-2xl shadow-2xl shadow-black/50"
+                className="absolute z-50 mt-2 p-3 bg-app-popover border border-app rounded-2xl shadow-2xl light:shadow-gray-300/50"
               >
                 <HexColorPicker color={color} onChange={onChange} />
               </motion.div>

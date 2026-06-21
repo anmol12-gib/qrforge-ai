@@ -5,7 +5,7 @@ const EMAIL = 'anmol.virmani@gmail.com';
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-black/40" role="contentinfo">
+    <footer className="border-t border-app bg-app-footer" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
@@ -13,16 +13,16 @@ export function Footer() {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center">
                 <QrCode className="w-4 h-4 text-white" aria-hidden />
               </div>
-              <span className="font-bold text-lg">QRForge AI</span>
+              <span className="font-bold text-lg text-app">QRForge AI</span>
             </div>
-            <p className="text-sm text-gray-500 leading-relaxed">
+            <p className="text-sm text-app-subtle leading-relaxed">
               Premium QR code generator built with modern web technologies. Fast, private, and beautiful.
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wider text-gray-400">Navigate</h3>
-            <ul className="space-y-2 text-sm text-gray-500">
+            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wider text-app-muted">Navigate</h3>
+            <ul className="space-y-2 text-sm text-app-subtle">
               {[
                 { label: 'Generator', href: '#generator' },
                 { label: 'Features', href: '#features' },
@@ -30,7 +30,7 @@ export function Footer() {
                 { label: 'FAQ', href: '#faq' },
               ].map((item) => (
                 <li key={item.href}>
-                  <a href={item.href} className="hover:text-white transition-colors">
+                  <a href={item.href} className="hover:text-app transition-colors">
                     {item.label}
                   </a>
                 </li>
@@ -39,15 +39,15 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wider text-gray-400">Developer</h3>
-            <div className="space-y-2 text-sm text-gray-400">
+            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wider text-app-muted">Developer</h3>
+            <div className="space-y-2 text-sm text-app-muted">
               <p>
-                <span className="text-gray-500">Full Name: </span>
+                <span className="text-app-subtle">Full Name: </span>
                 Anmol Virmani
               </p>
               <p>
-                <span className="text-gray-500">Email: </span>
-                <a href={`mailto:${EMAIL}`} className="hover:text-white transition-colors">
+                <span className="text-app-subtle">Email: </span>
+                <a href={`mailto:${EMAIL}`} className="hover:text-app transition-colors">
                   {EMAIL}
                 </a>
               </p>
@@ -66,7 +66,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-600">
+        <div className="pt-8 border-t border-app flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-app-subtle">
           <p>&copy; {new Date().getFullYear()} QRForge AI. All rights reserved.</p>
           <p>Built with React, TypeScript, Vite &amp; Tailwind CSS</p>
         </div>

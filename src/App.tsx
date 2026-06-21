@@ -40,7 +40,7 @@ function App() {
   }, [theme]);
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-blue-500/30 light:bg-gray-50 light:text-gray-900">
+    <div className="min-h-screen bg-app text-app selection:bg-blue-500/30 transition-colors duration-250">
       <a
         href="#generator"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100]

@@ -11,10 +11,10 @@ export function Toggle({ label, checked, onChange, description }: ToggleProps) {
   return (
     <div className="flex items-center justify-between gap-4">
       <div>
-        <label htmlFor={id} className="text-sm font-medium text-gray-300 cursor-pointer">
+        <label htmlFor={id} className="text-sm font-medium text-app-label cursor-pointer">
           {label}
         </label>
-        {description && <p className="text-xs text-gray-500 mt-0.5">{description}</p>}
+        {description && <p className="text-xs text-app-subtle mt-0.5">{description}</p>}
       </div>
       <button
         id={id}
@@ -25,8 +25,8 @@ export function Toggle({ label, checked, onChange, description }: ToggleProps) {
         onClick={() => onChange(!checked)}
         className={`
           relative w-11 h-6 rounded-full transition-colors duration-200 shrink-0
-          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60
-          ${checked ? 'bg-gradient-to-r from-blue-600 to-violet-600' : 'bg-white/15'}
+          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60 ring-offset-app
+          ${checked ? 'bg-gradient-to-r from-blue-600 to-violet-600' : 'bg-app-surface'}
         `}
       >
         <span

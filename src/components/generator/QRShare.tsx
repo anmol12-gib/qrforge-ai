@@ -69,7 +69,7 @@ export function QRShare() {
 
   return (
     <div className="space-y-3" aria-label="Share and download options">
-      <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider">Export</h3>
+      <h3 className="text-sm font-semibold text-app-label uppercase tracking-wider">Export</h3>
 
       <div className="grid grid-cols-2 gap-2">
         <Button
