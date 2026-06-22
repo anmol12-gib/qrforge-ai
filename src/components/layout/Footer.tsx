@@ -1,6 +1,7 @@
-import { QrCode } from 'lucide-react';
+import { QrCode, Zap } from 'lucide-react';
 
 const EMAIL = 'anmol.virmani@gmail.com';
+
 export function Footer() {
   return (
     <footer className="border-t border-app bg-app-footer" role="contentinfo">
@@ -50,10 +51,18 @@ export function Footer() {
                 </a>
               </p>
             </div>
-          </div>        </div>
+          </div>
+        </div>
 
         <div className="pt-8 border-t border-app flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-app-subtle">
           <p>&copy; {new Date().getFullYear()} QRForge AI. All rights reserved.</p>
+
+          {/* Built for Digital Heroes badge */}
+          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-app bg-gradient-to-r from-blue-500/10 to-violet-600/10 text-xs font-medium text-app-muted hover:text-app hover:border-blue-500/40 transition-colors cursor-default select-none">
+            <Zap className="w-3 h-3 text-violet-500" aria-hidden />
+            Built for Digital Heroes
+          </div>
+
           <p>Built with React, TypeScript, Vite &amp; Tailwind CSS</p>
         </div>
       </div>
