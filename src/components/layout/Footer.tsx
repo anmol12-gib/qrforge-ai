@@ -57,11 +57,15 @@ export function Footer() {
         <div className="pt-8 border-t border-app flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-app-subtle">
           <p>&copy; {new Date().getFullYear()} QRForge AI. All rights reserved.</p>
 
-          {/* Built for Digital Heroes badge */}
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-app bg-gradient-to-r from-blue-500/10 to-violet-600/10 text-xs font-medium text-app-muted hover:text-app hover:border-blue-500/40 transition-colors cursor-default select-none">
+          <a
+            href="https://digitalheroes.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-app bg-gradient-to-r from-blue-500/10 to-violet-600/10 text-xs font-medium text-app-muted hover:text-app hover:border-blue-500/40 transition-colors"
+          >
             <Zap className="w-3 h-3 text-violet-500" aria-hidden />
             Built for Digital Heroes
-          </div>
+          </a>
 
           <p>Built with React, TypeScript, Vite &amp; Tailwind CSS</p>
         </div>
