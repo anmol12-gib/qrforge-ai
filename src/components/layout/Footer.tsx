@@ -58,7 +58,7 @@ export function Footer() {
           <p>&copy; {new Date().getFullYear()} QRForge AI. All rights reserved.</p>
 
           <a
-            href="https://digitalheroes.com"
+            href="https://digitalheroesco.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-app bg-gradient-to-r from-blue-500/10 to-violet-600/10 text-xs font-medium text-app-muted hover:text-app hover:border-blue-500/40 transition-colors"
