@@ -1,6 +1,6 @@
 import { QrCode, Zap } from 'lucide-react';
 
-const EMAIL = 'anmol.virmani@gmail.com';
+const EMAIL = 'anmolvirmani13@gmail.com';
 
 export function Footer() {
   return (
@@ -46,7 +46,9 @@ export function Footer() {
               </p>
               <p>
                 <span className="text-app-subtle">Email: </span>
-                anmolvirmani13@gmail.com
+                <a href={`mailto:${EMAIL}`} className="hover:text-app transition-colors">
+                  {EMAIL}
+                </a>
               </p>
             </div>
           </div>
