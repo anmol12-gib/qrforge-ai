@@ -46,7 +46,7 @@ export function Footer() {
               </p>
               <p>
                 <span className="text-app-subtle">Email: </span>
-                <a href={`mailto:${EMAIL}`} className="hover:text-app transition-colors">
+                <a href={`mailto:${anmolvirmani13@gmail.com}`} className="hover:text-app transition-colors">
                   {anmolvirmani13@gmail.com}
                 </a>
               </p>
